@@ -1,0 +1,11 @@
+football_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      catalog: main
+      schema: bronze
+      host: "{{ env_var('DATABRICKS_HOST') }}"
+      http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"
+      token: "{{ env_var('DATABRICKS_TOKEN') }}"
+      threads: 4

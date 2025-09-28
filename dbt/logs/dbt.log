@@ -1,0 +1,57 @@
+[0m23:11:16.002910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018319C40980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018317965D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001831AD3BD90>]}
+
+
+============================== 23:11:16.005730 | 22b7e3f5-a167-4899-b8b8-f753b07a0495 ==============================
+[0m23:11:16.005730 [info ] [MainThread]: Running with dbt=1.10.11
+[0m23:11:16.006240 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt init', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'profiles_dir': 'C:\\Users\\diogo\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m23:11:50.731130 [debug] [MainThread]: Starter project path: C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\include\starter_project
+[0m23:11:50.756940 [info ] [MainThread]: 
+Your new dbt project "football_scraper_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:11:50.757619 [info ] [MainThread]: Setting up your profile.
+[0m23:12:18.575015 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m23:12:18.575364 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m23:12:18.575617 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m23:13:10.898289 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m23:13:10.900421 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\diogo\Documents\projects\public_project\webscraping_football\.venv\Lib\site-packages\dbt\task\init.py", line 114, in generate_target_from_input
+    choice = option_list[numeric_choice - 1]
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m23:13:10.901606 [debug] [MainThread]: Command `dbt init` failed at 23:13:10.901476 after 114.99 seconds
+[0m23:13:10.901900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001834DE029E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001831D2E70B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001834DD6BCE0>]}
+[0m23:13:10.902165 [debug] [MainThread]: Flushing usage events
+[0m23:13:11.650271 [debug] [MainThread]: An error was encountered while trying to flush usage events
